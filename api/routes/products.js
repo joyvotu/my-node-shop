@@ -17,7 +17,8 @@ router.get('/',(req,res,next) => {
                    id : doc._id,
                    request : {
                         type : 'GET',
-                        url : 'http://localhost:3000/products/'+doc._id
+                        //url : 'http://localhost:3000/products/'+doc._id
+                        url : 'https://joy-node-shop.herokuapp.com/products'+doc._id
                    }
                }
             })
@@ -45,7 +46,8 @@ router.post('/',checkAuth,(req,res,next) =>{
             id : result._id,
             request : {
                 type : 'GET',
-                url : 'http://localhost:3000/products/'+result._id
+                //url : 'http://localhost:3000/products/'+result._id
+                url : 'https://joy-node-shop.herokuapp.com/products'+result._id
             }
 
         }
@@ -71,7 +73,8 @@ router.get('/:productId',(req,res,next) => {
             id : doc._id,
             request :{
                 type : 'GET',
-                url : 'http://localhost:3000/products/'
+                //url : 'http://localhost:3000/products/'
+                url : 'https://joy-node-shop.herokuapp.com/products'
             }
         }
         console.log(doc);
@@ -97,7 +100,8 @@ router.patch('/:productId',checkAuth,(req,res,next) => {
             message : 'Updated Successfully',
             request :{
                 type : 'GET',
-                url : 'http://localhost:3000/products/'+req.params.productId
+                //url : 'http://localhost:3000/products/'+req.params.productId
+                url : 'https://joy-node-shop.herokuapp.com/products/'+req.params.productId
 
             }
         });

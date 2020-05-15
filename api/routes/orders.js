@@ -19,7 +19,8 @@ router.get('/',checkAuth,(req,res,next) => {
                   
                   request : {
                         type :'GET',
-                        url  : 'http://localhost:3000/orders/'+doc._id
+                        //url  : 'http://localhost:3000/orders/'+doc._id
+                        url : 'https://joy-node-shop.herokuapp.com/orders'+doc._id
                   }
               }
           })
@@ -60,7 +61,8 @@ router.post('/',checkAuth,(req,res,next) =>{
             message : 'Order placed',
             request : {
                 type : 'GET',
-                url: 'http://localhost:3000/orders/'+result._id
+                //url: 'http://localhost:3000/orders/'+result._id
+                url: 'https://joy-node-shop.herokuapp.com/orders'+result._id
             }
         });
     })
@@ -92,7 +94,8 @@ router.get('/:orderId',checkAuth,(req,res,next) => {
                 
                 request : {
                     type : 'GET',
-                    url : 'http://localhost:3000/orders'
+                    //url : 'http://localhost:3000/orders'
+                    url : 'https://joy-node-shop.herokuapp.com/orders'
                 }
             })
 
