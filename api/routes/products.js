@@ -18,7 +18,7 @@ router.get('/',(req,res,next) => {
                    request : {
                         type : 'GET',
                         //url : 'http://localhost:3000/products/'+doc._id
-                        url : 'https://joy-node-shop.herokuapp.com/products'+doc._id
+                        url : 'https://joy-node-shop.herokuapp.com/products/'+doc._id
                    }
                }
             })
@@ -47,7 +47,7 @@ router.post('/',checkAuth,(req,res,next) =>{
             request : {
                 type : 'GET',
                 //url : 'http://localhost:3000/products/'+result._id
-                url : 'https://joy-node-shop.herokuapp.com/products'+result._id
+                url : 'https://joy-node-shop.herokuapp.com/products/'+result._id
             }
 
         }
